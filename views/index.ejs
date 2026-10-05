@@ -11,10 +11,25 @@
 	 <p>See leht on loodud veebiprogrammeerimise kursusel. Natuke <a href="https://www.tlu.ee"> Tallinna Ülikoolist</a> ning ei sislda tõsiseltvõetavat sisu!</p>
 	<p>Esialgu tutvusime lihtsalt HTML keelega, peatselt programmeerime.</p>
 
-</body>
-	<hr><p><a href="/minust" >Miks tulin TLÜ-sse õppima?</a></p><p><a href="/vanasona">Juhuslik vanasõna</a></p><img src="/pic/avaleht.jpg" alt="Avalehe foto" width="400"><p><p>Nädalapäev: <%= dayNow %></p>
+
+	<hr>
+	<p><a href="/minust" >Miks tulin TLÜ-sse õppima?</a></p>
+	<p><a href="/vanasona">Juhuslik vanasõna</a></p>
+	<h2>Registreeri külastus</h2>
+
+<form action="/visit" method="post">
+    <label for="name">Sinu nimi:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Registreeri külastus</button>
+</form>
+
+<br>
+	
+	<img src="/pic/avaleht.jpg" alt="Avalehe foto" width="400">
+<p>Nädalapäev: <%= dayNow %></p>
 <p>Kuupäev: <%= dateNow %></p>
 <p>Kellaaeg: <%= timeNow %></p>
-<body>
+<p><a href="/lastvisit">Vaata viimast külastust</a></p>
+</body>
 
 </html>
