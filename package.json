@@ -1,0 +1,28 @@
+{
+  "name": "id.veebiprogrammeerimine",
+  "version": "1.0.0",
+  "description": "õppetöö raames tehtud veeb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kkellifrf@github.com/kkellifrf/ID.Veebiprogrammeerimine.git"
+  },
+  "keywords": [
+    "TLU",
+    "DTI",
+    "Õppetöö"
+  ],
+  "author": "Kelli Rammi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkellifrf/ID.Veebiprogrammeerimine/issues"
+  },
+  "homepage": "https://github.com/kkellifrf/ID.Veebiprogrammeerimine#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}
