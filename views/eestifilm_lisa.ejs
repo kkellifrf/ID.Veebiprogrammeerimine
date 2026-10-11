@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Uue isiku lisamine</title>
+</head>
+<body>
+    <h1>Lisa Eesti filmimaailma uus isik</h1>
+
+<form action="/eestifilm/lisa" method="POST">
+
+    <label for="first_name">Eesnimi:</label>
+    <input type="text" id="first_name" name="first_name"
+           value="<%= first_name ?? '' %>" required>
+    <br><br>
+
+    <label for="last_name">Perekonnanimi:</label>
+    <input type="text" id="last_name" name="last_name"
+           value="<%= last_name ?? '' %>" required>
+    <br><br>
+
+    <label for="born">Sünnikuupäev:</label>
+    <input type="date" id="born" name="born"
+           value="<%= born ?? '' %>" required>
+    <br><br>
+
+    <label for="deceased">Surmakuupäev (kui on):</label>
+    <input type="date" id="deceased" name="deceased"
+           value="<%= deceased ?? '' %>">
+    <br><br>
+
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <button type="submit">Lisa isik</button>
+
+</form>
+
+    <p><a href="/eestifilm">Tagasi avalehele</a></p>
+</body>
+</html>

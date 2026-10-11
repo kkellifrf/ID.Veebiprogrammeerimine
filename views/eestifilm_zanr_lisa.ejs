@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Uue filmižanri lisamine</title>
+</head>
+<body>
+    <h1>Lisa uus filmižanr</h1>
+
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <form action="/eestifilm/zanr/lisa" method="POST">
+
+        <label for="name">Žanri nimetus:</label>
+        <input type="text" id="name" name="name"
+               maxlength="50"
+               value="<%= name ?? '' %>" required>
+        <br><br>
+
+        <label for="description">Žanri kirjeldus:</label>
+        <textarea id="description" name="description"
+                  maxlength="1000"><%= description ?? '' %></textarea>
+        <br><br>
+
+        <button type="submit">Lisa žanr</button>
+    </form>
+
+    <p><a href="/eestifilm">Tagasi avalehele</a></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Uue ameti lisamine</title>
+</head>
+<body>
+    <h1>Lisa uus filmivaldkonna amet</h1>
+
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <form action="/eestifilm/amet/lisa" method="POST">
+
+        <label for="title">Ameti nimetus:</label>
+        <input type="text" id="title" name="title"
+               maxlength="50"
+               value="<%= title ?? '' %>" required>
+        <br><br>
+
+        <label for="description">Ameti kirjeldus:</label>
+        <textarea id="description" name="description"
+                  maxlength="1000"><%= description ?? '' %></textarea>
+        <br><br>
+
+        <button type="submit">Lisa amet</button>
+    </form>
+
+    <p><a href="/eestifilm">Tagasi avalehele</a></p>
+</body>
+</html>

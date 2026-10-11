@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Eesti filmimaailma isikud</title>
+</head>
+<body>
+    <h1>Eesti filmimaailma isikud</h1>
+
+    <ul>
+        <% isikud.forEach(function(isik) { %>
+            <li>
+                <%= isik.first_name %>
+                <%= isik.last_name %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <a href="/eestifilm">Tagasi avalehele</a>
+</body>
+</html>
